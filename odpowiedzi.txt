@@ -1,0 +1,20 @@
+1 tar -zxf archiwum.tar.gz
+2 sum genom.txt
+3 wc genom.txt (liczba bitow,liczba linii,liczba wyrazow)
+4
+5 cut -f 2 genom.txt | sort | uniq -u | wc 
+6
+7 cut -f 2 genom.txt | sort | uniq -d > mult_transcripts.txt 2>&1
+8 cut -f 3 genom.txt | sort | uniq -d | wc  (-1)
+9 grep -c chrY genom.txt
+10 touch genom_plus.txt  grep -e '+' genom.txt > genom_plus.txt
+   touch genom_neg.txt grep -e '+' genom.txt > genom_neg.txt
+11 sort -k 3 genom_plus.txt 
+   sort -k 5 genom_plus.txt | sort -r
+12 split -da 1 -l $((`wc -l < genom.txt`/4)) genom.txt Part --additional-suffix=".txt"
+13
+14
+15 grep 'BMP' genom.txt > BMPs_etc.txt
+16 cut -f 3 BMPs_etc.txt | sort | uniq -d | wc 
+17
+18
