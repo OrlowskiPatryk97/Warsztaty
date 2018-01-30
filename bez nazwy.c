@@ -14,10 +14,6 @@ else
 	printf("zle wartosci");
 	}
 }
-else
-{
-	printf("zle wartosci");
-	}
 return 0;
 }
 
